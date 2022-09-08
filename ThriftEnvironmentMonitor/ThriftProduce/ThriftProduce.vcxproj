@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7ee16e04-cc87-4024-990e-9794774323a0}</ProjectGuid>
-    <RootNamespace>EnvironmentMonitorServer</RootNamespace>
+    <ProjectGuid>{8bc20ade-a882-4236-bf0c-ffdc36f238f1}</ProjectGuid>
+    <RootNamespace>ThriftProduce</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>EnvironmentMonitor</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,14 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\CppEnv\vcpkg\packages\thrift_x64-windows\tools\thrift\gen-cpp\printhello.h" />
-    <ClInclude Include="..\..\..\..\..\CppEnv\vcpkg\packages\thrift_x64-windows\tools\thrift\gen-cpp\ServerToUi_types.h" />
-    <ClInclude Include="MonitorServer.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\CppEnv\vcpkg\packages\thrift_x64-windows\tools\thrift\gen-cpp\printhello.cpp" />
-    <ClCompile Include="..\..\..\..\..\CppEnv\vcpkg\packages\thrift_x64-windows\tools\thrift\gen-cpp\ServerToUi_types.cpp" />
-    <ClCompile Include="MonitorClient.cpp" />
+    <None Include="ServerToUi.thrift" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

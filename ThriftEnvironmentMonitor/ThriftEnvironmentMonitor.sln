@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EnvironmentMonitorServer", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThriftEnvironmentMonitorUI", "ThriftEnvironmentMonitorUI\ThriftEnvironmentMonitorUI.vcxproj", "{B6FAE332-EF5F-4EA0-A73B-EA9F88449D41}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThriftProduce", "ThriftProduce\ThriftProduce.vcxproj", "{8BC20ADE-A882-4236-BF0C-FFDC36F238F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{B6FAE332-EF5F-4EA0-A73B-EA9F88449D41}.Release|x64.Build.0 = Release|x64
 		{B6FAE332-EF5F-4EA0-A73B-EA9F88449D41}.Release|x86.ActiveCfg = Release|x64
 		{B6FAE332-EF5F-4EA0-A73B-EA9F88449D41}.Release|x86.Build.0 = Release|x64
+		{8BC20ADE-A882-4236-BF0C-FFDC36F238F1}.Debug|x64.ActiveCfg = Debug|x64
+		{8BC20ADE-A882-4236-BF0C-FFDC36F238F1}.Debug|x64.Build.0 = Debug|x64
+		{8BC20ADE-A882-4236-BF0C-FFDC36F238F1}.Debug|x86.ActiveCfg = Debug|Win32
+		{8BC20ADE-A882-4236-BF0C-FFDC36F238F1}.Debug|x86.Build.0 = Debug|Win32
+		{8BC20ADE-A882-4236-BF0C-FFDC36F238F1}.Release|x64.ActiveCfg = Release|x64
+		{8BC20ADE-A882-4236-BF0C-FFDC36F238F1}.Release|x64.Build.0 = Release|x64
+		{8BC20ADE-A882-4236-BF0C-FFDC36F238F1}.Release|x86.ActiveCfg = Release|Win32
+		{8BC20ADE-A882-4236-BF0C-FFDC36F238F1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

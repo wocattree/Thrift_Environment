@@ -1,5 +1,6 @@
-#include "ThriftEnvironmentMonitorUI.h"
+﻿#include "ThriftEnvironmentMonitorUI.h"
 #include <QtWidgets/QApplication>
+
 
 int main(int argc, char *argv[])
 {

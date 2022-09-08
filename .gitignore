@@ -1,0 +1,17 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/ThriftEnvironmentMonitor/.vs/ThriftEnvironmentMonitor
+/ThriftEnvironmentMonitor/EnvironmentMonitorServer/x64
+/ThriftEnvironmentMonitor/ThriftProduce
+/ThriftEnvironmentMonitor/ThriftEnvironmentMonitorUI
+*.user
+/ThriftEnvironmentMonitor/x64/Debug/ThriftEnvironmentMonitorUI.pdb
+/ThriftEnvironmentMonitor/x64/Debug/ThriftEnvironmentMonitorUI.ilk
+/ThriftEnvironmentMonitor/x64/Debug/ThriftEnvironmentMonitorUI.exe
+/ThriftEnvironmentMonitor/x64/Debug/EnvironmentMonitor.pdb
+/ThriftEnvironmentMonitor/x64/Debug/EnvironmentMonitor.exe
+/ThriftEnvironmentMonitor/x64/Release/EnvironmentMonitor.pdb
+/ThriftEnvironmentMonitor/x64/Release/EnvironmentMonitor.exe
+/.vs
