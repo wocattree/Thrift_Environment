@@ -3,6 +3,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_ThriftEnvironmentMonitorUI.h"
 
+
 class ThriftEnvironmentMonitorUI : public QMainWindow
 {
     Q_OBJECT

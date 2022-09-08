@@ -1,5 +1,8 @@
 ﻿#include "ThriftEnvironmentMonitorUI.h"
 #include "DigiClock.h"
+#include <QtCharts>
+#include <QChartView>
+#include <QLineSeries>
 
 ThriftEnvironmentMonitorUI::ThriftEnvironmentMonitorUI(QWidget *parent)
     : QMainWindow(parent)
@@ -17,7 +20,23 @@ ThriftEnvironmentMonitorUI::ThriftEnvironmentMonitorUI(QWidget *parent)
 
 
     connect(ui.BtnShutDown, SIGNAL(clicked()), this, SLOT(close()));
+
+	//添加在widget中显示
+	QSplineSeries* LineSeries = new QSplineSeries();  //QSplineSeries 平滑曲线  QLineSeries折线
+	for (double x = 0; x < 10; x += 0.1)
+	{
+		LineSeries->append(x, sin(x));
+	}
+	QChart* chart = new QChart();
+	chart->addSeries(LineSeries);
+	chart->legend()->hide();
+	chart->createDefaultAxes();
+	chart->setTheme(QChart::ChartThemeDark);
+	ui.testwidget->setChart(chart);
+
+
 }
 
 ThriftEnvironmentMonitorUI::~ThriftEnvironmentMonitorUI()
 {}
+
