@@ -1,13 +1,15 @@
 ﻿#include "ThriftEnvironmentMonitorUI.h"
-#include "DigiClock.h"
+#include "DlgDataTime.h"
+#include "DlgTempChart.h"
 #include <QtCharts>
 #include <QChartView>
 #include <QLineSeries>
 
+
 ThriftEnvironmentMonitorUI::ThriftEnvironmentMonitorUI(QWidget *parent)
     : QMainWindow(parent)
 {
-    QWidget *Clock = new DigiClock();
+    QWidget *Clock = new DlgDataTime();
     ui.setupUi(this);
     //添加时间控件
     ui.DataTimeHlayout->addWidget(Clock);
@@ -21,17 +23,13 @@ ThriftEnvironmentMonitorUI::ThriftEnvironmentMonitorUI(QWidget *parent)
 
     connect(ui.BtnShutDown, SIGNAL(clicked()), this, SLOT(close()));
 
-	//添加在widget中显示
-	QSplineSeries* LineSeries = new QSplineSeries();  //QSplineSeries 平滑曲线  QLineSeries折线
-	for (double x = 0; x < 10; x += 0.1)
-	{
-		LineSeries->append(x, sin(x));
-	}
-	QChart* chart = new QChart();
-	chart->addSeries(LineSeries);
+	DlgTempChart* chart = new DlgTempChart();
+	chart->setTitle("温湿度曲线");
 	chart->legend()->hide();
-	chart->createDefaultAxes();
-	chart->setTheme(QChart::ChartThemeDark);
+	chart->setAnimationOptions(QChart::AllAnimations);
+	//QChartView chartView(chart); 控件已经在UI里提升为QchartView类型，因此不用转换
+	//chartView.setRenderHint(QPainter::Antialiasing);
+	ui.testwidget->setRenderHint(QPainter::Antialiasing);
 	ui.testwidget->setChart(chart);
 
 

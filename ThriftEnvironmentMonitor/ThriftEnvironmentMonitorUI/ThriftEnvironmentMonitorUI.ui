@@ -146,21 +146,15 @@
            <enum>QFrame::Raised</enum>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
-           <item row="1" column="1">
-            <widget class="QLabel" name="label_2">
+           <item row="1" column="0">
+            <widget class="QChartView" name="testwidget" native="true">
              <property name="maximumSize">
               <size>
                <width>500</width>
                <height>230</height>
               </size>
              </property>
-             <property name="text">
-              <string>温湿度曲线</string>
-             </property>
             </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QChartView" name="testwidget" native="true"/>
            </item>
           </layout>
          </widget>

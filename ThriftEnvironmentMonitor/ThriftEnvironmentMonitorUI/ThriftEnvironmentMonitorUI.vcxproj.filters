@@ -40,13 +40,19 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DigiClock.cpp">
+    <ClCompile Include="DlgDataTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgTempChart.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="DigiClock.h">
+    <QtMoc Include="DlgDataTime.h">
       <Filter>Form Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DlgTempChart.h">
+      <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>
