@@ -66,7 +66,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -90,6 +90,9 @@
     <QtRcc Include="ThriftEnvironmentMonitorUI.qrc" />
     <QtUic Include="ThriftEnvironmentMonitorUI.ui" />
     <QtMoc Include="ThriftEnvironmentMonitorUI.h" />
+    <ClCompile Include="..\ThriftProduce\gen-cpp\DeviceToUi.cpp" />
+    <ClCompile Include="..\ThriftProduce\gen-cpp\DeviceToUiHandler.cpp" />
+    <ClCompile Include="..\ThriftProduce\gen-cpp\ServerToUi_types.cpp" />
     <ClCompile Include="DlgDataTime.cpp" />
     <ClCompile Include="DlgTempChart.cpp" />
     <ClCompile Include="ThriftEnvironmentMonitorUI.cpp" />
@@ -100,6 +103,11 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="DlgTempChart.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ThriftProduce\gen-cpp\DeviceToUi.h" />
+    <ClInclude Include="..\ThriftProduce\gen-cpp\ServerToUi_types.h" />
+    <ClInclude Include="DeviceToUiHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

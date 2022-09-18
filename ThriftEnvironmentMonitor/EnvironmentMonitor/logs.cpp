@@ -1,29 +1,32 @@
-#include "logs.h"
+ï»¿#include "logs.h"
 
 ////////////////////////////////
 //filename:logs.cpp
-//description:»·¾³¼àÊÓÏµÍ³ÈÕÖ¾Àà
+//description:çŽ¯å¢ƒç›‘è§†ç³»ç»Ÿæ—¥å¿—ç±»
 //data:2022/09/10 0:11:56
 //author:wocattree
 ////////////////////////////////
 
-SystemLogs::SystemLogs()
+CLogs::CLogs()
 {
-	A_LOG = spdlog::basic_logger_mt("sbasic_logger", "logs/A_LOGS.txt");
-	P_LOG = spdlog::basic_logger_mt("sbasic_logger", "logs/P_LOGS.txt");
-	D_LOG = spdlog::basic_logger_mt("sbasic_logger", "logs/D_LOGS.txt");
-	try
-	{
-		//ÔÚlogs/basic.txtÖÐÐ´ÏÂHello world
-		A_LOG->info("Hello {}", "world");
-	}
-	catch (const spdlog::spdlog_ex& ex)
-	{
-		std::cout << "Log initialization failed: " << ex.what() << std::endl;
-	}
+    try
+    {
+        A_LOG = spdlog::rotating_logger_mt("A_LOGS", "logs/A_LOGS.txt", 1048576 * 5, 3);
+        A_LOG->flush_on(spdlog::level::trace);
+        //rotating_logger->info("a = {}, b = {}, a/b = {}, a%b = {}", a, b, a / b, a % b);
+        //rotating_logger->flush();ç”¨æ³•
+        P_LOG = spdlog::rotating_logger_mt("P_LOGS", "logs/P_LOGS.txt", 1048576 * 5, 3);
+        P_LOG->flush_on(spdlog::level::trace);
+        D_LOG = spdlog::rotating_logger_mt("D_LOGS", "logs/D_LOGS.txt", 1048576 * 5, 3);
+        D_LOG->flush_on(spdlog::level::trace);
+    }
+    catch (const spdlog::spdlog_ex& ex)
+    {
+        std::cout << "Log initialization failed: " << ex.what() << std::endl;
+    }
 }
 
-SystemLogs::~SystemLogs()
+CLogs::~CLogs()
 {
 
 }

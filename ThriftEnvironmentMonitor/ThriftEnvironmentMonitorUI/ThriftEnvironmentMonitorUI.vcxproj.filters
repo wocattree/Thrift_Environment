@@ -21,6 +21,12 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Thrift">
+      <UniqueIdentifier>{55a548e8-fe75-484e-a6fd-0f2f2d017481}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thrift\gencpp">
+      <UniqueIdentifier>{b416f509-b0f2-463f-b452-5dba71c53049}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="ThriftEnvironmentMonitorUI.qrc">
@@ -46,6 +52,15 @@
     <ClCompile Include="DlgTempChart.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\ThriftProduce\gen-cpp\DeviceToUi.cpp">
+      <Filter>Thrift\gencpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThriftProduce\gen-cpp\ServerToUi_types.cpp">
+      <Filter>Thrift\gencpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThriftProduce\gen-cpp\DeviceToUiHandler.cpp">
+      <Filter>Thrift</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="DlgDataTime.h">
@@ -54,5 +69,16 @@
     <QtMoc Include="DlgTempChart.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ThriftProduce\gen-cpp\DeviceToUi.h">
+      <Filter>Thrift\gencpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThriftProduce\gen-cpp\ServerToUi_types.h">
+      <Filter>Thrift\gencpp</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceToUiHandler.h">
+      <Filter>Thrift</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

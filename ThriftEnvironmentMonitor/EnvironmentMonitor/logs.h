@@ -1,25 +1,26 @@
-#pragma once
+ï»¿#pragma once
 #include <spdlog/spdlog.h>
 #include "spdlog/sinks/basic_file_sink.h"
 #include <iostream>
 #include "spdlog/logger.h"
+#include <spdlog/sinks/rotating_file_sink.h>
 
 ////////////////////////////////
 //filename:logs.h
-//description:»·¾³¼àÊÓÏµÍ³ÈÕÖ¾Àà
+//description:ç¯å¢ƒç›‘è§†ç³»ç»Ÿæ—¥å¿—ç±»
 //data:2022/09/10 0:11:27
 //author:wocattree
 ////////////////////////////////
 
-class SystemLogs
+class CLogs
 {
 public:
-	SystemLogs();
-	~SystemLogs();
+    CLogs();
+    ~CLogs();
 public:
-	std::shared_ptr<spdlog::logger>						A_LOG;					// Ó¦ÓÃ´òÓ¡ÈÕÖ¾
-	std::shared_ptr<spdlog::logger>						P_LOG;					// Á÷³Ì´òÓ¡ÈÕÖ¾
-	std::shared_ptr<spdlog::logger>						D_LOG;					// µ÷ÊÔ´òÓ¡ÈÕÖ¾
-	
-	
+    std::shared_ptr<spdlog::logger>                        A_LOG;                    // åº”ç”¨æ‰“å°æ—¥å¿—
+    std::shared_ptr<spdlog::logger>                        P_LOG;                    // æµç¨‹æ‰“å°æ—¥å¿—
+    std::shared_ptr<spdlog::logger>                        D_LOG;                    // è°ƒè¯•æ‰“å°æ—¥å¿—
+    
+    
 };

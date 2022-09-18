@@ -15,3 +15,6 @@
 /ThriftEnvironmentMonitor/x64/Release/EnvironmentMonitor.pdb
 /ThriftEnvironmentMonitor/x64/Release/EnvironmentMonitor.exe
 /.vs
+/ThriftEnvironmentMonitor/EnvironmentMonitor/.vs/EnvironmentMonitorServer
+/ThriftEnvironmentMonitor/EnvironmentMonitor/x64
+/ThriftEnvironmentMonitor/x64

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{d4251504-79b1-4ab7-9d16-7a819d73e0a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logs">
+      <UniqueIdentifier>{815c1dcb-5348-4b6a-8c67-62bacb6df31f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thrift">
+      <UniqueIdentifier>{bda977af-6765-4509-9779-f24f0804f40d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thrift\gencpp">
+      <UniqueIdentifier>{37ab0dce-b61e-4244-8991-93da6c477540}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ModuleBase.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleSimuTemp.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="logs.h">
+      <Filter>logs</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h" />
+    <ClInclude Include="..\ThriftProduce\gen-cpp\DeviceToUi.h">
+      <Filter>Thrift\gencpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThriftProduce\gen-cpp\ServerToUi_types.h">
+      <Filter>Thrift\gencpp</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceToUiProxy.h">
+      <Filter>Thrift</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ModuleBase.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleSimuTemp.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="logs.cpp">
+      <Filter>logs</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp" />
+    <ClCompile Include="DeviceToUiProxy.cpp">
+      <Filter>Thrift</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThriftProduce\gen-cpp\DeviceToUi.cpp">
+      <Filter>Thrift\gencpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThriftProduce\gen-cpp\ServerToUi_types.cpp">
+      <Filter>Thrift\gencpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
