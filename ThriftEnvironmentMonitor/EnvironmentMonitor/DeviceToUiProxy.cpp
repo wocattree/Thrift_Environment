@@ -21,6 +21,7 @@ using namespace apache::thrift::transport;
 
 DeviceToUiProxy::DeviceToUiProxy()
 {
+    ReportDeviceTemps();
 }
 
 DeviceToUiProxy::~DeviceToUiProxy()

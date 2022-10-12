@@ -5,20 +5,16 @@
 //author:wocattree
 ////////////////////////////////
 #pragma once
-class DeviceToUiHandler
+#include <algorithm>
+#include"../ThriftProduce/gen-cpp/DeviceToUi.h"
+#include <iostream>
+
+class DeviceToUiHandler : virtual public DeviceToUiIf
 {
 public:
-	DeviceToUiHandler();
-	~DeviceToUiHandler();
+    DeviceToUiHandler();
 
-private:
+    //客户端调用的函数
+    void ReportDeviceTemps(const MonitorTemps& monitortemps);
 
 };
-
-DeviceToUiHandler::DeviceToUiHandler()
-{
-}
-
-DeviceToUiHandler::~DeviceToUiHandler()
-{
-}

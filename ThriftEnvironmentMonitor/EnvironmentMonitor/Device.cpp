@@ -5,6 +5,7 @@
 //author:wocattree
 ////////////////////////////////
 #include "Device.h"
+#include "DeviceToUiProxy.h"
 
 CDevice::CDevice()
 {
@@ -41,13 +42,28 @@ void ThreadInit()
     }
 
 }
+////////////////////////////////
+//funcname:
+//description:调用Thrift服务
+//param:
+//return:
+//data:2022/09/19 21:32:11
+//author:wocattree
+///////////////////////////////
+void ThriftSend()
+{
+    DeviceToUiProxy::DeviceToUiProxy();
+}
 
 int main()
 {
 
-    std::thread   tMainThread(ThreadInit);
+    //std::thread   tMainThread(ThreadInit);
     //循环启动线程
-    tMainThread.join();
+    //tMainThread.join();
+
+    //std::thread tThriftSend(ThriftSend);
+    //tThriftSend.join();
 
     return 0;
 }

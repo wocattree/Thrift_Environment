@@ -58,7 +58,7 @@
     <ClCompile Include="..\ThriftProduce\gen-cpp\ServerToUi_types.cpp">
       <Filter>Thrift\gencpp</Filter>
     </ClCompile>
-    <ClCompile Include="..\ThriftProduce\gen-cpp\DeviceToUiHandler.cpp">
+    <ClCompile Include="DeviceToUiHandler.cpp">
       <Filter>Thrift</Filter>
     </ClCompile>
   </ItemGroup>

@@ -31,7 +31,8 @@ void DlgDataTime::ShowTime()
     std::stringstream ss;
     ss << std::put_time(std::localtime(&t), "%F %T");// %F %T 等价于 %Y-%m-%d %H:%M:%S
     std::string str = ss.str();
-    QString text = QString::fromStdString(str);
+    //QString text = QString::fromStdString(str); 会有乱码
+    QString text = QString::fromLocal8Bit(str); //解决中文乱码问题
 
     /*if (showColon)
     {
