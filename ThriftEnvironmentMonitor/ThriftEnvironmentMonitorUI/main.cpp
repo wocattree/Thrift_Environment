@@ -29,9 +29,8 @@ void UiThrift()
 
 int main(int argc, char *argv[])
 {
-    //std::thread tUiThrift(UiThrift);
-    //tUiThrift.join();
-
+    std::thread tUiThrift(UiThrift);
+    tUiThrift.join();
 
     QApplication a(argc, argv);
     ThriftEnvironmentMonitorUI w;
