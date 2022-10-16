@@ -2,6 +2,7 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_ThriftEnvironmentMonitorUI.h"
+#include "Logs.h"
 
 
 class ThriftEnvironmentMonitorUI : public QMainWindow

@@ -20,19 +20,14 @@ ThriftEnvironmentMonitorUI::ThriftEnvironmentMonitorUI(QWidget *parent)
     QTableWidgetItem* Item = new QTableWidgetItem(STabelTime);
     ui.tableWidget->setItem(0, 0, Item);
 
-
     connect(ui.BtnShutDown, SIGNAL(clicked()), this, SLOT(close()));
 
     DlgTempChart* chart = new DlgTempChart();
     chart->setTitle("温湿度曲线");
     chart->legend()->hide();
     chart->setAnimationOptions(QChart::AllAnimations);
-    //QChartView chartView(chart); 控件已经在UI里提升为QchartView类型，因此不用转换
-    //chartView.setRenderHint(QPainter::Antialiasing);
     ui.testwidget->setRenderHint(QPainter::Antialiasing);
     ui.testwidget->setChart(chart);
-
-
 }
 
 ThriftEnvironmentMonitorUI::~ThriftEnvironmentMonitorUI()

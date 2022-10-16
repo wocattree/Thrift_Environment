@@ -1,25 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Form Files">
-      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
-      <Extensions>ui</Extensions>
-    </Filter>
-    <Filter Include="Translation Files">
-      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
-      <Extensions>ts</Extensions>
     </Filter>
     <Filter Include="Thrift">
       <UniqueIdentifier>{55a548e8-fe75-484e-a6fd-0f2f2d017481}</UniqueIdentifier>
@@ -27,31 +11,22 @@
     <Filter Include="Thrift\gencpp">
       <UniqueIdentifier>{b416f509-b0f2-463f-b452-5dba71c53049}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Logs">
+      <UniqueIdentifier>{a7364970-5d41-49aa-b58b-aaf02fb8542e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DeviceUi">
+      <UniqueIdentifier>{336a2f1b-5741-4e7c-8ce0-1a33ba18edad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DB">
+      <UniqueIdentifier>{2228c487-e75f-42e9-8e70-675a247c6d36}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="ThriftEnvironmentMonitorUI.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtUic Include="ThriftEnvironmentMonitorUI.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtMoc Include="ThriftEnvironmentMonitorUI.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <ClCompile Include="ThriftEnvironmentMonitorUI.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DlgDataTime.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DlgTempChart.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\ThriftProduce\gen-cpp\DeviceToUi.cpp">
       <Filter>Thrift\gencpp</Filter>
     </ClCompile>
@@ -61,13 +36,35 @@
     <ClCompile Include="DeviceToUiHandler.cpp">
       <Filter>Thrift</Filter>
     </ClCompile>
+    <ClCompile Include="Logs.cpp">
+      <Filter>Logs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgDataTime.cpp">
+      <Filter>DeviceUi</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgTempChart.cpp">
+      <Filter>DeviceUi</Filter>
+    </ClCompile>
+    <ClCompile Include="ThriftEnvironmentMonitorUI.cpp">
+      <Filter>DeviceUi</Filter>
+    </ClCompile>
+    <ClCompile Include="UiThriftManager.cpp">
+      <Filter>Thrift</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceDB.cpp">
+      <Filter>DB</Filter>
+    </ClCompile>
+    <ClCompile Include="ThriftEnvironmentMonitor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="DlgDataTime.h">
-      <Filter>Form Files</Filter>
+      <Filter>DeviceUi</Filter>
     </QtMoc>
     <QtMoc Include="DlgTempChart.h">
-      <Filter>Header Files</Filter>
+      <Filter>DeviceUi</Filter>
+    </QtMoc>
+    <QtMoc Include="ThriftEnvironmentMonitorUI.h">
+      <Filter>DeviceUi</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
@@ -80,5 +77,20 @@
     <ClInclude Include="DeviceToUiHandler.h">
       <Filter>Thrift</Filter>
     </ClInclude>
+    <ClInclude Include="Logs.h">
+      <Filter>Logs</Filter>
+    </ClInclude>
+    <ClInclude Include="UiThriftManager.h">
+      <Filter>Thrift</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceDB.h">
+      <Filter>DB</Filter>
+    </ClInclude>
+    <ClInclude Include="ThriftEnvironmentMonitor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ThriftEnvironmentMonitorUI.ui">
+      <Filter>DeviceUi</Filter>
+    </QtUic>
   </ItemGroup>
 </Project>

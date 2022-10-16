@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EnvironmentMonitor", "EnvironmentMonitor\EnvironmentMonitor.vcxproj", "{7EE16E04-CC87-4024-990E-9794774323A0}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThriftEnvironmentMonitorUI", "ThriftEnvironmentMonitorUI\ThriftEnvironmentMonitorUI.vcxproj", "{B6FAE332-EF5F-4EA0-A73B-EA9F88449D41}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThriftProduce", "ThriftProduce\ThriftProduce.vcxproj", "{8BC20ADE-A882-4236-BF0C-FFDC36F238F1}"
@@ -19,18 +17,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Debug|ARM.ActiveCfg = Debug|x64
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Debug|ARM.Build.0 = Debug|x64
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Debug|x64.ActiveCfg = Debug|x64
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Debug|x64.Build.0 = Debug|x64
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Debug|x86.ActiveCfg = Debug|Win32
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Debug|x86.Build.0 = Debug|Win32
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Release|ARM.ActiveCfg = Release|x64
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Release|ARM.Build.0 = Release|x64
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Release|x64.ActiveCfg = Release|x64
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Release|x64.Build.0 = Release|x64
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Release|x86.ActiveCfg = Release|Win32
-		{7EE16E04-CC87-4024-990E-9794774323A0}.Release|x86.Build.0 = Release|Win32
 		{B6FAE332-EF5F-4EA0-A73B-EA9F88449D41}.Debug|ARM.ActiveCfg = Debug|ARM
 		{B6FAE332-EF5F-4EA0-A73B-EA9F88449D41}.Debug|ARM.Build.0 = Debug|ARM
 		{B6FAE332-EF5F-4EA0-A73B-EA9F88449D41}.Debug|x64.ActiveCfg = Debug|x64

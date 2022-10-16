@@ -92,7 +92,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <LibraryPath>D:\software\Env\MySQL\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>D:\software\Env\MySQL\include;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <IncludePath>$(IncludePath)</IncludePath>
@@ -100,6 +101,14 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
   </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
     <ClCompile>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -153,6 +162,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DeviceDB.cpp" />
+    <ClCompile Include="UiThriftManager.cpp" />
     <QtRcc Include="ThriftEnvironmentMonitorUI.qrc" />
     <QtUic Include="ThriftEnvironmentMonitorUI.ui" />
     <QtMoc Include="ThriftEnvironmentMonitorUI.h" />
@@ -161,8 +172,9 @@
     <ClCompile Include="DeviceToUiHandler.cpp" />
     <ClCompile Include="DlgDataTime.cpp" />
     <ClCompile Include="DlgTempChart.cpp" />
+    <ClCompile Include="Logs.cpp" />
     <ClCompile Include="ThriftEnvironmentMonitorUI.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ThriftEnvironmentMonitor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="DlgDataTime.h" />
@@ -173,7 +185,11 @@
   <ItemGroup>
     <ClInclude Include="..\ThriftProduce\gen-cpp\DeviceToUi.h" />
     <ClInclude Include="..\ThriftProduce\gen-cpp\ServerToUi_types.h" />
+    <ClInclude Include="DeviceDB.h" />
     <ClInclude Include="DeviceToUiHandler.h" />
+    <ClInclude Include="Logs.h" />
+    <ClInclude Include="ThriftEnvironmentMonitor.h" />
+    <ClInclude Include="UiThriftManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
