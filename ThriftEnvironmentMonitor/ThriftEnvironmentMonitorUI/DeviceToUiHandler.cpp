@@ -19,4 +19,16 @@ void DeviceToUiHandler::ReportDeviceTemps(const MonitorTemps& monitortemps)
 {
     // Your implementation goes here
     std::for_each(monitortemps.Temps.begin(), monitortemps.Temps.end(), [](const auto& i) {std::cout << i << " "; });
+
+    //接收到消息，转发到状态机，是什么消息做什么处理todo
+
+    //存入数据库
+    auto& m_pDeviceDB = DeviceDB::GetInstance();
+
+    std::string Sqlword = "insert into d_environment values( now(),";
+    std::string temp = std::to_string(monitortemps.Temps[0]) + ",";
+    std::string humi = std::to_string(monitortemps.Temps[1]) + ")";
+    Sqlword = Sqlword + temp + humi;
+    m_pDeviceDB.Implement(Sqlword.c_str());
+
 }

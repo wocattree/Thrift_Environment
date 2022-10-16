@@ -12,6 +12,7 @@ UiThriftManager::~UiThriftManager()
 
 void UiThriftManager::UiThriftInit()
 {
+    Sleep(500);
     //初始化Thrift服务端
     int port = 9090;
     ::std::shared_ptr<DeviceToUiHandler> handler(new DeviceToUiHandler());
@@ -20,6 +21,6 @@ void UiThriftManager::UiThriftInit()
     ::std::shared_ptr<TTransportFactory> transportFactory(new TBufferedTransportFactory());
     ::std::shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
     TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
-    server.serve();
     PLOG("info", "Thrift Server is init success!");
+    server.serve();
 }

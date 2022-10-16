@@ -11,7 +11,7 @@
 #define MY_SQL_H
 
 #include<iostream>
-#include<WinSock.h>
+#include<WinSock2.h>
 #include<Windows.h>
 #include<mysql.h>
 #include"Logs.h"

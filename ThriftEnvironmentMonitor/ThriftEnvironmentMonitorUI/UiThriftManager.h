@@ -17,8 +17,8 @@ class UiThriftManager
 public:
     UiThriftManager();
     ~UiThriftManager();
+
 public:
     void UiThriftInit();
-private:
 
 };

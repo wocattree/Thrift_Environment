@@ -9,6 +9,7 @@
 #include"../ThriftProduce/gen-cpp/DeviceToUi.h"
 #include <iostream>
 #include "Logs.h"
+#include "DeviceDB.h"
 
 class DeviceToUiHandler : virtual public DeviceToUiIf
 {

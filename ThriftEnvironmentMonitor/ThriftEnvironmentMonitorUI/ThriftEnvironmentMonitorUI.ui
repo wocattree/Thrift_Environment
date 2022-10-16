@@ -178,37 +178,6 @@
           </column>
          </widget>
         </item>
-        <item row="0" column="2">
-         <widget class="QFrame" name="frame_4">
-          <property name="maximumSize">
-           <size>
-            <width>250</width>
-            <height>230</height>
-           </size>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::Box</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_8">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_5">
-             <property name="maximumSize">
-              <size>
-               <width>250</width>
-               <height>230</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>CO2曲线</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
         <item row="1" column="1">
          <widget class="QFrame" name="frame_2">
           <property name="maximumSize">
@@ -233,38 +202,13 @@
               </size>
              </property>
              <property name="text">
-              <string>监控视频</string>
+              <string/>
              </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QFrame" name="frame">
-          <property name="maximumSize">
-           <size>
-            <width>500</width>
-            <height>230</height>
-           </size>
-          </property>
-          <property name="autoFillBackground">
-           <bool>false</bool>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::Box</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_2">
-           <item row="1" column="0">
-            <widget class="QChartView" name="testwidget" native="true">
-             <property name="maximumSize">
-              <size>
-               <width>500</width>
-               <height>230</height>
-              </size>
+             <property name="pixmap">
+              <pixmap>png/监控.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -289,7 +233,7 @@
            <item row="0" column="0">
             <layout class="QHBoxLayout" name="horizontalLayout_3">
              <item>
-              <widget class="QLabel" name="label_7">
+              <widget class="QLabel" name="Label_Light">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -307,7 +251,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_10">
+              <widget class="QLabel" name="Label_Switch">
                <property name="maximumSize">
                 <size>
                  <width>150</width>
@@ -319,6 +263,9 @@
                  <pointsize>14</pointsize>
                 </font>
                </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
                <property name="text">
                 <string>开关图</string>
                </property>
@@ -329,7 +276,7 @@
            <item row="1" column="0">
             <layout class="QHBoxLayout" name="horizontalLayout_4">
              <item>
-              <widget class="QLabel" name="label_8">
+              <widget class="QLabel" name="Label_Fan">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -347,7 +294,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_11">
+              <widget class="QLabel" name="Label_Switch_2">
                <property name="maximumSize">
                 <size>
                  <width>150</width>
@@ -359,6 +306,9 @@
                  <pointsize>14</pointsize>
                 </font>
                </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
                <property name="text">
                 <string>开关图</string>
                </property>
@@ -369,7 +319,7 @@
            <item row="2" column="0">
             <layout class="QHBoxLayout" name="horizontalLayout_5">
              <item>
-              <widget class="QLabel" name="label_12">
+              <widget class="QLabel" name="Label_Temp">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -399,17 +349,36 @@
                  <pointsize>14</pointsize>
                 </font>
                </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
                <property name="text">
                 <string>数值</string>
                </property>
               </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>60</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </item>
            <item row="3" column="0">
             <layout class="QHBoxLayout" name="horizontalLayout_6">
              <item>
-              <widget class="QLabel" name="label_13">
+              <widget class="QLabel" name="Label_Humi">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -439,17 +408,36 @@
                  <pointsize>14</pointsize>
                 </font>
                </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
                <property name="text">
                 <string>数值</string>
                </property>
               </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>60</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </item>
            <item row="4" column="0">
             <layout class="QHBoxLayout" name="horizontalLayout_7">
              <item>
-              <widget class="QLabel" name="label_14">
+              <widget class="QLabel" name="Label_CO2">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -479,17 +467,36 @@
                  <pointsize>14</pointsize>
                 </font>
                </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
                <property name="text">
                 <string>数值</string>
                </property>
               </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>60</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </item>
            <item row="5" column="0">
             <layout class="QHBoxLayout" name="horizontalLayout_8">
              <item>
-              <widget class="QLabel" name="label_9">
+              <widget class="QLabel" name="Label_LightValue">
                <property name="maximumSize">
                 <size>
                  <width>80</width>
@@ -519,12 +526,65 @@
                  <pointsize>14</pointsize>
                 </font>
                </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
                <property name="text">
                 <string>数值</string>
                </property>
               </widget>
              </item>
+             <item>
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>60</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
             </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="2">
+         <widget class="QFrame" name="frame">
+          <property name="maximumSize">
+           <size>
+            <width>750</width>
+            <height>230</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="1" column="0">
+            <widget class="QChartView" name="testwidget" native="true">
+             <property name="maximumSize">
+              <size>
+               <width>750</width>
+               <height>230</height>
+              </size>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
