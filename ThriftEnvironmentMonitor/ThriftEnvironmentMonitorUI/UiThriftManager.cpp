@@ -21,4 +21,5 @@ void UiThriftManager::UiThriftInit()
     ::std::shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
     TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
     server.serve();
+    PLOG("info", "Thrift Server is init success!");
 }

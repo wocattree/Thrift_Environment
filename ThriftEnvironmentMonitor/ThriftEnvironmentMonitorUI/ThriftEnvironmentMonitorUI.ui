@@ -74,6 +74,9 @@
       <property name="flow">
        <enum>QListView::LeftToRight</enum>
       </property>
+      <property name="spacing">
+       <number>20</number>
+      </property>
       <item>
        <property name="text">
         <string>客厅</string>
@@ -105,7 +108,7 @@
        </size>
       </property>
       <property name="text">
-       <string>关机</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -128,69 +131,54 @@
         </size>
        </property>
        <layout class="QGridLayout" name="gridLayout_7">
-        <item row="0" column="1">
-         <widget class="QFrame" name="frame">
+        <item row="0" column="0" rowspan="2">
+         <widget class="QTableWidget" name="tableWidget">
           <property name="maximumSize">
            <size>
             <width>500</width>
-            <height>230</height>
+            <height>550</height>
            </size>
           </property>
-          <property name="autoFillBackground">
-           <bool>false</bool>
+          <property name="textElideMode">
+           <enum>Qt::ElideMiddle</enum>
           </property>
-          <property name="frameShape">
-           <enum>QFrame::Box</enum>
+          <property name="rowCount">
+           <number>16</number>
           </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_2">
-           <item row="1" column="0">
-            <widget class="QChartView" name="testwidget" native="true">
-             <property name="maximumSize">
-              <size>
-               <width>500</width>
-               <height>230</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>时间</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>温度</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>湿度</string>
+           </property>
+          </column>
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QFrame" name="frame_3">
-          <property name="maximumSize">
-           <size>
-            <width>220</width>
-            <height>230</height>
-           </size>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::Box</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_4">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_4">
-             <property name="maximumSize">
-              <size>
-               <width>220</width>
-               <height>230</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>光照强度曲线</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="0" column="3">
          <widget class="QFrame" name="frame_4">
           <property name="maximumSize">
            <size>
@@ -252,13 +240,16 @@
           </layout>
          </widget>
         </item>
-        <item row="1" column="2">
-         <widget class="QFrame" name="frame_5">
+        <item row="0" column="1">
+         <widget class="QFrame" name="frame">
           <property name="maximumSize">
            <size>
-            <width>220</width>
-            <height>320</height>
+            <width>500</width>
+            <height>230</height>
            </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
           </property>
           <property name="frameShape">
            <enum>QFrame::Box</enum>
@@ -266,24 +257,21 @@
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <layout class="QGridLayout" name="gridLayout_5">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_6">
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="1" column="0">
+            <widget class="QChartView" name="testwidget" native="true">
              <property name="maximumSize">
               <size>
-               <width>220</width>
-               <height>320</height>
+               <width>500</width>
+               <height>230</height>
               </size>
-             </property>
-             <property name="text">
-              <string>浇水次数</string>
              </property>
             </widget>
            </item>
           </layout>
          </widget>
         </item>
-        <item row="1" column="3">
+        <item row="1" column="2">
          <widget class="QFrame" name="frame_6">
           <property name="maximumSize">
            <size>
@@ -541,50 +529,6 @@
           </layout>
          </widget>
         </item>
-        <item row="0" column="0" rowspan="2">
-         <widget class="QTableWidget" name="tableWidget">
-          <property name="maximumSize">
-           <size>
-            <width>300</width>
-            <height>550</height>
-           </size>
-          </property>
-          <property name="rowCount">
-           <number>16</number>
-          </property>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <row/>
-          <column>
-           <property name="text">
-            <string>时间</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>温度</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>湿度</string>
-           </property>
-          </column>
-         </widget>
-        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="MainPage2">
@@ -598,7 +542,7 @@
      </widget>
     </item>
     <item row="0" column="2">
-     <widget class="QPushButton" name="BtnQurry">
+     <widget class="QPushButton" name="BtnQuery">
       <property name="maximumSize">
        <size>
         <width>100</width>
@@ -606,7 +550,7 @@
        </size>
       </property>
       <property name="text">
-       <string>查询</string>
+       <string/>
       </property>
      </widget>
     </item>

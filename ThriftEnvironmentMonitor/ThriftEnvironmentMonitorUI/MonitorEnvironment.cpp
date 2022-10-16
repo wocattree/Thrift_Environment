@@ -1,4 +1,4 @@
-﻿#include "ThriftEnvironmentMonitor.h"
+﻿#include "MonitorEnvironment.h"
 
 int main(int argc, char *argv[])
 {

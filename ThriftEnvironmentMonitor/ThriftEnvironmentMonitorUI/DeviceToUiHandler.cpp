@@ -18,7 +18,5 @@ DeviceToUiHandler::DeviceToUiHandler()
 void DeviceToUiHandler::ReportDeviceTemps(const MonitorTemps& monitortemps)
 {
     // Your implementation goes here
-    //printf("ReportDeviceTemps\n");
-    //printf("服务端接收到数据，收到的数据是：\n");
     std::for_each(monitortemps.Temps.begin(), monitortemps.Temps.end(), [](const auto& i) {std::cout << i << " "; });
 }

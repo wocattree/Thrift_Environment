@@ -174,7 +174,7 @@
     <ClCompile Include="DlgTempChart.cpp" />
     <ClCompile Include="Logs.cpp" />
     <ClCompile Include="ThriftEnvironmentMonitorUI.cpp" />
-    <ClCompile Include="ThriftEnvironmentMonitor.cpp" />
+    <ClCompile Include="MonitorEnvironment.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="DlgDataTime.h" />
@@ -188,7 +188,7 @@
     <ClInclude Include="DeviceDB.h" />
     <ClInclude Include="DeviceToUiHandler.h" />
     <ClInclude Include="Logs.h" />
-    <ClInclude Include="ThriftEnvironmentMonitor.h" />
+    <ClInclude Include="MonitorEnvironment.h" />
     <ClInclude Include="UiThriftManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

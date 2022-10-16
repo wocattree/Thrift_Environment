@@ -54,7 +54,7 @@
     <ClCompile Include="DeviceDB.cpp">
       <Filter>DB</Filter>
     </ClCompile>
-    <ClCompile Include="ThriftEnvironmentMonitor.cpp" />
+    <ClCompile Include="MonitorEnvironment.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="DlgDataTime.h">
@@ -86,7 +86,7 @@
     <ClInclude Include="DeviceDB.h">
       <Filter>DB</Filter>
     </ClInclude>
-    <ClInclude Include="ThriftEnvironmentMonitor.h" />
+    <ClInclude Include="MonitorEnvironment.h" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="ThriftEnvironmentMonitorUI.ui">

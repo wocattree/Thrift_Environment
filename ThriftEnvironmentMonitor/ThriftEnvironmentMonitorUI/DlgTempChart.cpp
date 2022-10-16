@@ -11,7 +11,8 @@ DlgTempChart::DlgTempChart(QGraphicsItem* parent , Qt::WindowFlags wFlags):
     m_y(1)
 {
     QObject::connect(&m_timer, &QTimer::timeout, this, &DlgTempChart::HandleTimeout);
-    m_timer.setInterval(1000); //5秒刷新一次
+    //每一秒刷新一次
+    m_timer.setInterval(1000);
 
     m_series = new QSplineSeries(this);
     QPen green(Qt::red);
@@ -43,19 +44,9 @@ void DlgTempChart::HandleTimeout()
     qreal x = plotArea().width() / m_axisY->tickCount();
     qreal y = (10 - 0) / 2;
     m_x += y;
-    m_y = m_x;
-    m_series->append(m_x, m_y);
-    scroll(x, 0);
-    if (m_x == 100)
-        m_timer.stop();
-
-    /*qreal x = plotArea().width() / m_axisX->tickCount();
-    qreal y = (m_axisX->max() - m_axisX->min()) / m_axisX->tickCount();
-    m_x += y;
     m_y = QRandomGenerator::global()->bounded(5) + 2.5;
     m_series->append(m_x, m_y);
     scroll(x, 0);
     if (m_x == 100)
         m_timer.stop();
-    */
 }

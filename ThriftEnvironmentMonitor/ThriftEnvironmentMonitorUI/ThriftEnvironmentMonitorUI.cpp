@@ -14,6 +14,15 @@ ThriftEnvironmentMonitorUI::ThriftEnvironmentMonitorUI(QWidget *parent)
     //添加时间控件
     ui.DataTimeHlayout->addWidget(Clock);
 
+    //设置按钮图标
+    ui.BtnShutDown->setIcon(QIcon("./png/关机.png"));
+    ui.BtnShutDown->setIconSize(QSize(80,80));
+
+    ui.BtnQuery->setIcon(QIcon("./png/信息查询.png"));
+    ui.BtnQuery->setIconSize(QSize(80, 80));
+
+    ui.tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+
     //添加当前时间到表格
     QDateTime TabelTime = QDateTime::currentDateTime();
     QString STabelTime = TabelTime.toString("yyyy/MM/dd HH:mm:ss");
