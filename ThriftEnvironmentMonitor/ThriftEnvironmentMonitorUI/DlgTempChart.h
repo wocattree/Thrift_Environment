@@ -12,6 +12,7 @@ class DlgTempChart : public QChart
 public:
     DlgTempChart(QGraphicsItem* parent = nullptr, Qt::WindowFlags = {});
     virtual ~DlgTempChart();
+    QDateTime ScrolTime;
 public slots:
     void HandleTimeout();
 private:
