@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Module\ModuleBase.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="logs\logs.cpp">
+      <Filter>logs</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp" />
+    <ClCompile Include="Thrift\DeviceToUiProxy.cpp">
+      <Filter>Thrift</Filter>
+    </ClCompile>
+    <ClCompile Include="Thrift\gen-cpp\DeviceToUi.cpp">
+      <Filter>Thrift\gencpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Thrift\gen-cpp\ServerToUi_types.cpp">
+      <Filter>Thrift\gencpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Monitor.cpp">
+      <Filter>Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MonitorTempHumiRead.cpp">
+      <Filter>Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadBase.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadMonitorBase.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Thrift">
+      <UniqueIdentifier>{8b10589d-7e87-49f9-a298-5903eadb8bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logs">
+      <UniqueIdentifier>{1b637e62-9202-4475-9630-ac1f27644f8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{5a373ed2-2630-4ddd-a7bf-d2b7d077eb03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thrift\gencpp">
+      <UniqueIdentifier>{53e5bba3-6ff6-4698-b598-8bb065a70840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monitor">
+      <UniqueIdentifier>{43f85461-2524-4f31-9f18-12d641868671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{68b3f330-c62f-4eb5-914e-067835f4fd31}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Module\ModuleBase.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="logs\logs.h">
+      <Filter>logs</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h" />
+    <ClInclude Include="Thrift\DeviceToUiProxy.h">
+      <Filter>Thrift</Filter>
+    </ClInclude>
+    <ClInclude Include="Thrift\gen-cpp\DeviceToUi.h">
+      <Filter>Thrift\gencpp</Filter>
+    </ClInclude>
+    <ClInclude Include="Thrift\gen-cpp\ServerToUi_types.h">
+      <Filter>Thrift\gencpp</Filter>
+    </ClInclude>
+    <ClInclude Include="Monitor.h">
+      <Filter>Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorTempHumiRead.h">
+      <Filter>Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadBase.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadMonitorBase.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
