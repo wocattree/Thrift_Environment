@@ -8,11 +8,12 @@
 #pragma once
 #include<vector>
 #include <thread>
+#include <boost/noncopyable.hpp>
 #include "./logs/logs.h"
 #include "./Monitor.h"
 
 
-class CDevice
+class CDevice : boost::noncopyable
 {
 public:
     CDevice();

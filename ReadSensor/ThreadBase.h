@@ -1,8 +1,8 @@
 #pragma once
 #include "Device.h"
-#include <boost/noncopyable.hpp>
 
 class ThreadBase : boost::noncopyable
+				 : public std::enable_shared_from_this<ThreadBase>
 {
 public:
 	ThreadBase(CDevice* pDevice);
