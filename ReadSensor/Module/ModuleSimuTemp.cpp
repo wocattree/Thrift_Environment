@@ -1,7 +1,7 @@
 #include"ModuleSimuTemp.h"
 
-SimuData::TempInfo::CModuleSimuTemp::CModuleSimuTemp()
-    :TempIndex(0)
+SimuData::TempInfo::CModuleSimuTemp::CModuleSimuTemp(CDevice* pDevice) :  CModuleBase(pDevice)
+    ,TempIndex(0)
 {
     vSimuTempInfos.resize(10);
 }
@@ -12,12 +12,13 @@ SimuData::TempInfo::CModuleSimuTemp::~CModuleSimuTemp()
 }
 
 
-void SimuData::TempInfo::CModuleSimuTemp::Run()
-{
-   // CDevice *m_Device = CDevice::GetInstance();
-    ProduceTemps();
-  //  m_Device->m_Logs->D_LOG->info("温度生成完毕");
-}
+//int SimuData::TempInfo::CModuleSimuTemp::Run()
+//{
+//   // CDevice *m_Device = CDevice::GetInstance();
+//    ProduceTemps();
+//  //  m_Device->m_Logs->D_LOG->info("温度生成完毕");
+//    return 1;
+//}
 
 void SimuData::TempInfo::CModuleSimuTemp::ProduceTemps()
 {

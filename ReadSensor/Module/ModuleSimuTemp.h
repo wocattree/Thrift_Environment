@@ -15,7 +15,7 @@ namespace SimuData
         class CModuleSimuTemp : public CModuleBase
         {
         public:
-            CModuleSimuTemp();
+            CModuleSimuTemp(CDevice *pDevice);
             ~CModuleSimuTemp();
 
             ////////////////////////////////
@@ -28,16 +28,7 @@ namespace SimuData
             ///////////////////////////////
             std::vector<float> GetSimuTemoInfos();
 
-
-            ////////////////////////////////
-            //funcname:Run()
-            //description:线程启动
-            //param:
-            //return:
-            //data:2022/09/17 21:49:14
-            //author:wocattree
-            ///////////////////////////////
-            void Run();
+        /*    int Run();*/
 
         private:
             std::vector<float>                vSimuTempInfos;            //模拟产生的温度数值列表

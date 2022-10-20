@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{f199791c-b0ec-41ef-9848-c4e64d1422bd}</ProjectGuid>
+    <ProjectGuid>{644aa768-b364-48b7-bfce-1f9c56a20541}</ProjectGuid>
     <Keyword>Linux</Keyword>
     <RootNamespace>ReadSensor</RootNamespace>
     <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
@@ -69,10 +69,11 @@
     <ClCompile Include="logs\logs.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Module\ModuleBase.cpp" />
-    <ClCompile Include="Monitor.cpp" />
-    <ClCompile Include="MonitorTempHumiRead.cpp" />
-    <ClCompile Include="ThreadBase.cpp" />
-    <ClCompile Include="ThreadMonitorBase.cpp" />
+    <ClCompile Include="Module\ModuleSimuTemp.cpp" />
+    <ClCompile Include="Monitor\Monitor.cpp" />
+    <ClCompile Include="Monitor\MonitorTempHumiThread.cpp" />
+    <ClCompile Include="Thread\ThreadBase.cpp" />
+    <ClCompile Include="Thread\ThreadMonitorBase.cpp" />
     <ClCompile Include="Thrift\DeviceToUiProxy.cpp" />
     <ClCompile Include="Thrift\gen-cpp\DeviceToUi.cpp" />
     <ClCompile Include="Thrift\gen-cpp\ServerToUi_types.cpp" />
@@ -81,32 +82,20 @@
     <ClInclude Include="Device.h" />
     <ClInclude Include="logs\logs.h" />
     <ClInclude Include="Module\ModuleBase.h" />
-    <ClInclude Include="Monitor.h" />
-    <ClInclude Include="MonitorTempHumiRead.h" />
-    <ClInclude Include="ThreadBase.h" />
-    <ClInclude Include="ThreadMonitorBase.h" />
+    <ClInclude Include="Module\ModuleSimuTemp.h" />
+    <ClInclude Include="Monitor\Monitor.h" />
+    <ClInclude Include="Monitor\MonitorTempHumiThread.h" />
+    <ClInclude Include="Thread\ThreadBase.h" />
+    <ClInclude Include="Thread\ThreadMonitorBase.h" />
     <ClInclude Include="Thrift\DeviceToUiProxy.h" />
     <ClInclude Include="Thrift\gen-cpp\DeviceToUi.h" />
     <ClInclude Include="Thrift\gen-cpp\ServerToUi_types.h" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <Link />
-    <ClCompile>
-      <WarningLevel>EnableAllWarnings</WarningLevel>
-      <CppAdditionalWarning>%(CppAdditionalWarning)</CppAdditionalWarning>
-      <AdditionalOptions>-DHAVE_NETINET_IN_H %(AdditionalOptions)</AdditionalOptions>
-    </ClCompile>
-    <PostBuildEvent>
-      <Command>
-      </Command>
-    </PostBuildEvent>
+    <ClCompile />
     <Link>
       <AdditionalOptions>-DHAVE_NETINET_IN_H  -lthrift -latomic -lpthread %(AdditionalOptions)</AdditionalOptions>
     </Link>
-    <PreBuildEvent>
-      <Command>
-      </Command>
-    </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

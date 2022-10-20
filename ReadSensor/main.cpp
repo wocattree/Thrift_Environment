@@ -1,8 +1,13 @@
-﻿#include"Device.h"
+﻿#include "Device.h"
+#include "Monitor/Monitor.h"
 
-int main()
+int main(void)
 {
-    //初始化管理器
+    CDevice* pDevice = new CDevice();
+    CMonitor* pMonitor = new CMonitor(pDevice);
 
-    
+    pMonitor->StarkWork();
+
+
+    getchar();
 }

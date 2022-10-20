@@ -9,7 +9,7 @@
 
 CDevice::CDevice()
 {
-    m_monitor.reset(new CMonitor(this));
+
 }
 
 CDevice::~CDevice()
