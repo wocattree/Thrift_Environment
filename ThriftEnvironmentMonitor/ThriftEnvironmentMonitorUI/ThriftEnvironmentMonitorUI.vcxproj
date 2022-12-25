@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B6FAE332-EF5F-4EA0-A73B-EA9F88449D41}</ProjectGuid>
     <Keyword>QtVS_v304</Keyword>
-    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.22000.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">10.0.19041.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">10.0.19041.0</WindowsTargetPlatformVersion>
@@ -92,8 +92,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>D:\software\Env\MySQL\lib;$(LibraryPath)</LibraryPath>
-    <ExternalIncludePath>D:\software\Env\MySQL\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>F:\SoftWare\MySQL\MySQL Server 8.0\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>F:\SoftWare\MySQL\MySQL Server 8.0\include;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <IncludePath>$(IncludePath)</IncludePath>
