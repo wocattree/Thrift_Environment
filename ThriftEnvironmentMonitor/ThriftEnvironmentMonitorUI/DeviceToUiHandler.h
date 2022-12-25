@@ -11,6 +11,8 @@
 #include "Logs.h"
 #include "DeviceDB.h"
 
+//std::vector<double> mytemp(2, 0);
+
 class DeviceToUiHandler : virtual public DeviceToUiIf
 {
 public:

@@ -20,6 +20,8 @@
 #define PLOG(level,...) SPDLOG_LOGGER_CALL(XLogger::getInstance()->getPLogger().get(),XLogger::getInstance()->getPLogInfo(level),__VA_ARGS__)
 #define ALOG(level,...) SPDLOG_LOGGER_CALL(XLogger::getInstance()->getALogger().get(),XLogger::getInstance()->getALogInfo(level),__VA_ARGS__)
 
+#define ALARM(param1,param2,param3,...) (I6000device::getInstance()->SendAlarm(param1,param2,param3,__VA_ARGS__)) 
+
 ///////////////////////////////////////////
 //使用方法：
 //    PLOG("debug", "helllo");

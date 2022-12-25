@@ -86,7 +86,6 @@
     <ClInclude Include="DeviceDB.h">
       <Filter>DB</Filter>
     </ClInclude>
-    <ClInclude Include="MonitorEnvironment.h" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="ThriftEnvironmentMonitorUI.ui">

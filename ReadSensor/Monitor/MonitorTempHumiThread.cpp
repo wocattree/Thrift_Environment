@@ -21,11 +21,21 @@ int CMonitorHumiThread::Run()
 
 		//DLOG
 	}
-	
-	m_spThread.reset(new	std::thread([&]() {
-		std::this_thread::sleep_for(std::chrono::seconds(3));
-		BeginRecvTempHumi();
+	if (m_spThread == nullptr)
+	{
+		m_spThread.reset(new std::thread([&]() {
+			while (ContinueRun())
+			{
+				std::this_thread::sleep_for(std::chrono::seconds(3));
+				BeginRecvTempHumi();
+			}
 		}));
+
+		if (m_spThread->joinable())
+		{
+			m_spThread->join();
+		}
+	}
 	return 1;
 }
 
