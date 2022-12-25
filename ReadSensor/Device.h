@@ -6,14 +6,15 @@
 ////////////////////////////////
 
 #pragma once
+#include "./Thrift/DeviceToUiProxy.h"
+#include <boost/noncopyable.hpp>
 #include<vector>
 #include <thread>
-#include <boost/noncopyable.hpp>
+#include <memory>
 #include "./logs/logs.h"
-#include "./Monitor.h"
 
 
-class CDevice : boost::noncopyable
+class CDevice : public boost::noncopyable
 {
 public:
     CDevice();
@@ -21,11 +22,6 @@ public:
 
 public:
 
-    std::shared_ptr<CMonitor> GetMonitor()
-    {
-        return m_monitor;
-    }
-
 private:
-    std::shared_ptr<CMonitor>                                           m_monitor;
+
 };

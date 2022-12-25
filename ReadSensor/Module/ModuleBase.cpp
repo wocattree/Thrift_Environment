@@ -7,7 +7,7 @@
 
 #include "ModuleBase.h"
 
-CModuleBase::CModuleBase(CDevice* pDevice) : ThreadBase(pDevice)
+CModuleBase::CModuleBase(CDevice* pDevice) :  CThreadBase(pDevice)
 {
 
 }

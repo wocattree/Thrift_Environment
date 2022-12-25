@@ -2,7 +2,6 @@
 #include <QtCore/QRandomGenerator>
 
 
-
 DlgTempChart::DlgTempChart(QGraphicsItem* parent , Qt::WindowFlags wFlags):
     QChart(DlgTempChart::ChartTypeCartesian, parent, wFlags),
     m_series(0),
@@ -37,7 +36,7 @@ DlgTempChart::DlgTempChart(QGraphicsItem* parent , Qt::WindowFlags wFlags):
     m_axisX->setTickCount(10);
     m_axisX->setRange(curDateTIme.addSecs(0), curDateTIme.addSecs(10));
     m_axisX->setFormat("mm:ss");
-    m_axisY->setRange(2, 7);
+    m_axisY->setRange(20, 30);
 
     m_timer.start();
 }
@@ -49,6 +48,8 @@ DlgTempChart::~DlgTempChart()
 
 void DlgTempChart::HandleTimeout()
 {
+    
+
     qreal x = plotArea().width() / m_axisX->tickCount();
     qreal y = (QRandomGenerator::global()->bounded(5) ) / m_axisX->tickCount();
     m_x += y;
@@ -58,7 +59,17 @@ void DlgTempChart::HandleTimeout()
 
     QDateTime temp_AddTimePos = curDateTIme.addSecs(0);
 
-    m_series->append(temp_AddTimePos.toMSecsSinceEpoch(), m_y);
+    //MonitorTemps m_temp;
+
+    //if (!monitortemps.Temps.size())
+    //{
+   //     m_series->append(temp_AddTimePos.toMSecsSinceEpoch(), monitortemps.Temps[0]);
+    //}
+    //else
+    //{
+        m_series->append(temp_AddTimePos.toMSecsSinceEpoch(), m_y);
+    //}
+
 
     //toMSecsSinceEpoch(),采用qint64也可以实现判断
     if (QDateTime::currentDateTime().addSecs(0) > ScrolTime.addSecs(9))

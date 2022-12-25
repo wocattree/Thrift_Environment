@@ -10,6 +10,7 @@
 
 #include "DeviceToUiHandler.h"
 
+
 DeviceToUiHandler::DeviceToUiHandler()
 {
     // Your initialization goes here
@@ -30,5 +31,4 @@ void DeviceToUiHandler::ReportDeviceTemps(const MonitorTemps& monitortemps)
     std::string humi = std::to_string(monitortemps.Temps[1]) + ")";
     Sqlword = Sqlword + temp + humi;
     m_pDeviceDB.Implement(Sqlword.c_str());
-
 }

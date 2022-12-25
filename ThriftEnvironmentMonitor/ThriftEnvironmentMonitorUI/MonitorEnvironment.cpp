@@ -1,4 +1,11 @@
-﻿#include "MonitorEnvironment.h"
+﻿#pragma once
+#include "UiThriftManager.h"
+#include "ThriftEnvironmentMonitorUI.h"
+#include "./logs.h"
+#include <QtWidgets/QApplication>
+#include <thread>
+#include"DeviceDB.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -14,5 +21,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     ThriftEnvironmentMonitorUI w;
     w.show();
+
+    //进入事件循环
     return a.exec(); 
 }

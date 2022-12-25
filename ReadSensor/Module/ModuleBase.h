@@ -14,9 +14,10 @@
 #include "../logs/logs.h"
 #include "../Thrift/DeviceToUiProxy.h"
 #include "../ThreadBase.h"
+#include "../Device.h"
 
 
-class CModuleBase : public ThreadBase
+class CModuleBase : public CThreadBase
 {
 public:
     CModuleBase(CDevice * pDevice);
