@@ -40,7 +40,7 @@ static inline int NowTimeToInt()
 XLogger::XLogger()
 {
     // hardcode log path
-    const std::string log_dir = "./log"; 
+    const std::string log_dir = "./src/log"; 
 
     // decide print to console or log file
     bool console = false;

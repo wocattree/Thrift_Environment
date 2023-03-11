@@ -8,88 +8,100 @@
     <Filter Include="Thrift">
       <UniqueIdentifier>{55a548e8-fe75-484e-a6fd-0f2f2d017481}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Thrift\gencpp">
-      <UniqueIdentifier>{b416f509-b0f2-463f-b452-5dba71c53049}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Logs">
-      <UniqueIdentifier>{a7364970-5d41-49aa-b58b-aaf02fb8542e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DeviceUi">
+    <Filter Include="Ui">
       <UniqueIdentifier>{336a2f1b-5741-4e7c-8ce0-1a33ba18edad}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DB">
+    <Filter Include="Ui\Compnent">
+      <UniqueIdentifier>{c222fc7b-7752-46e9-aa90-7a84d93e5a62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
       <UniqueIdentifier>{2228c487-e75f-42e9-8e70-675a247c6d36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{7cefbb1e-ec30-4982-a366-a7233bb71dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thrift\gen-cpp">
+      <UniqueIdentifier>{b416f509-b0f2-463f-b452-5dba71c53049}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="ThriftEnvironmentMonitorUI.qrc">
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="src\Manager\DBManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Manager\UiThriftManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Thrift\DeviceToUiHandler.cpp">
+      <Filter>Thrift</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ui\environmentMonitorWidget.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ui\mainWidget.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ui\component\DlgDataTime.cpp">
+      <Filter>Ui\Compnent</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ui\component\DlgTempChart.cpp">
+      <Filter>Ui\Compnent</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Common\Logs.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Thrift\gen-cpp\DeviceToUi.cpp">
+      <Filter>Thrift\gen-cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Thrift\gen-cpp\ServerToUi_types.cpp">
+      <Filter>Thrift\gen-cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Manager\DBManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Manager\UiThriftManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Thrift\DeviceToUiHandler.h">
+      <Filter>Thrift</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\Logs.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Thrift\gen-cpp\DeviceToUi.h">
+      <Filter>Thrift\gen-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Thrift\gen-cpp\ServerToUi_types.h">
+      <Filter>Thrift\gen-cpp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\Ui\environmentMonitorWidget.h">
+      <Filter>Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="src\Ui\mainWidget.h">
+      <Filter>Ui</Filter>
+    </QtMoc>
+    <QtMoc Include="src\Ui\component\DlgDataTime.h">
+      <Filter>Ui\Compnent</Filter>
+    </QtMoc>
+    <QtMoc Include="src\Ui\component\DlgTempChart.h">
+      <Filter>Ui\Compnent</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="src\Ui\environmentMonitorWidget.ui">
+      <Filter>Ui</Filter>
+    </QtUic>
+    <QtUic Include="src\Ui\mainWidget.ui">
+      <Filter>Ui</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="UIResource.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\ThriftProduce\gen-cpp\DeviceToUi.cpp">
-      <Filter>Thrift\gencpp</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ThriftProduce\gen-cpp\ServerToUi_types.cpp">
-      <Filter>Thrift\gencpp</Filter>
-    </ClCompile>
-    <ClCompile Include="DeviceToUiHandler.cpp">
-      <Filter>Thrift</Filter>
-    </ClCompile>
-    <ClCompile Include="Logs.cpp">
-      <Filter>Logs</Filter>
-    </ClCompile>
-    <ClCompile Include="DlgDataTime.cpp">
-      <Filter>DeviceUi</Filter>
-    </ClCompile>
-    <ClCompile Include="DlgTempChart.cpp">
-      <Filter>DeviceUi</Filter>
-    </ClCompile>
-    <ClCompile Include="ThriftEnvironmentMonitorUI.cpp">
-      <Filter>DeviceUi</Filter>
-    </ClCompile>
-    <ClCompile Include="UiThriftManager.cpp">
-      <Filter>Thrift</Filter>
-    </ClCompile>
-    <ClCompile Include="DeviceDB.cpp">
-      <Filter>DB</Filter>
-    </ClCompile>
-    <ClCompile Include="MonitorEnvironment.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="DlgDataTime.h">
-      <Filter>DeviceUi</Filter>
-    </QtMoc>
-    <QtMoc Include="DlgTempChart.h">
-      <Filter>DeviceUi</Filter>
-    </QtMoc>
-    <QtMoc Include="ThriftEnvironmentMonitorUI.h">
-      <Filter>DeviceUi</Filter>
-    </QtMoc>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\ThriftProduce\gen-cpp\DeviceToUi.h">
-      <Filter>Thrift\gencpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\ThriftProduce\gen-cpp\ServerToUi_types.h">
-      <Filter>Thrift\gencpp</Filter>
-    </ClInclude>
-    <ClInclude Include="DeviceToUiHandler.h">
-      <Filter>Thrift</Filter>
-    </ClInclude>
-    <ClInclude Include="Logs.h">
-      <Filter>Logs</Filter>
-    </ClInclude>
-    <ClInclude Include="UiThriftManager.h">
-      <Filter>Thrift</Filter>
-    </ClInclude>
-    <ClInclude Include="DeviceDB.h">
-      <Filter>DB</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <QtUic Include="ThriftEnvironmentMonitorUI.ui">
-      <Filter>DeviceUi</Filter>
-    </QtUic>
   </ItemGroup>
 </Project>

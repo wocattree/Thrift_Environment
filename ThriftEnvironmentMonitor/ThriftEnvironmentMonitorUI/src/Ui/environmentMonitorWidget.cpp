@@ -1,12 +1,12 @@
-﻿#include "ThriftEnvironmentMonitorUI.h"
-#include "DlgDataTime.h"
-#include "DlgTempChart.h"
+﻿#include "environmentMonitorWidget.h"
+#include "../Ui/component/DlgDataTime.h"
+#include "../Ui/component/DlgTempChart.h"
 #include <QtCharts>
 #include <QChartView>
 #include <QLineSeries>
 
 
-ThriftEnvironmentMonitorUI::ThriftEnvironmentMonitorUI(QWidget *parent)
+environmentMonitorWidget::environmentMonitorWidget(QWidget *parent)
     : QMainWindow(parent)
 {
     QWidget *Clock = new DlgDataTime();
@@ -15,20 +15,19 @@ ThriftEnvironmentMonitorUI::ThriftEnvironmentMonitorUI(QWidget *parent)
     ui.DataTimeHlayout->addWidget(Clock);
 
     //设置按钮图标
-    ui.BtnShutDown->setIcon(QIcon("./png/关机.png"));
+    ui.BtnShutDown->setIcon(QIcon(":/src/Ui/png/关机.png"));
     ui.BtnShutDown->setIconSize(QSize(80,80));
 
-    ui.BtnQuery->setIcon(QIcon("./png/信息查询.png"));
+    ui.BtnQuery->setIcon(QIcon(":/src/Ui/png/信息查询.png"));
     ui.BtnQuery->setIconSize(QSize(80, 80));
-
-    SetLabelImg("./png/照明.png", ui.Label_Light);
-    SetLabelImg("./png/新风管.png", ui.Label_Fan);
-    SetLabelImg("./png/摄氏度.png", ui.Label_Temp);
-    SetLabelImg("./png/湿度.png", ui.Label_Humi);
-    SetLabelImg("./png/二氧化碳.png", ui.Label_CO2);
-    SetLabelImg("./png/日照.png", ui.Label_LightValue);
-    SetLabelImg("./png/开关-开.png", ui.Label_Switch);
-    SetLabelImg("./png/开关-关.png", ui.Label_Switch_2);
+    SetLabelImg(":/src/Ui/png/照明.png", ui.Label_Light);
+    SetLabelImg(":/src/Ui/png/新风管.png", ui.Label_Fan);
+    SetLabelImg(":/src/Ui/png/摄氏度.png", ui.Label_Temp);
+    SetLabelImg(":/src/Ui/png/湿度.png", ui.Label_Humi);
+    SetLabelImg(":/src/Ui/png/二氧化碳.png", ui.Label_CO2);
+    SetLabelImg(":/src/Ui/png/日照.png", ui.Label_LightValue);
+    SetLabelImg(":/src/Ui/png/开关-开.png", ui.Label_Switch);
+    SetLabelImg(":/src/Ui/png/开关-关.png", ui.Label_Switch_2);
 
     ui.tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
@@ -46,12 +45,17 @@ ThriftEnvironmentMonitorUI::ThriftEnvironmentMonitorUI(QWidget *parent)
     chart->setAnimationOptions(QChart::AllAnimations);
     ui.testwidget->setRenderHint(QPainter::Antialiasing);
     ui.testwidget->setChart(chart);
+
+    connect(ui.MainListWidget, SIGNAL(currentRowChanged(int)), ui.MainStackWidget, SLOT(setCurrentIndex(int)));
+
+    ui.la_envi_view->setPixmap(QPixmap(":/src/Ui/png/监控.png"));
+    ui.la_envi_view->setScaledContents(true);
 }
 
-ThriftEnvironmentMonitorUI::~ThriftEnvironmentMonitorUI()
+environmentMonitorWidget::~environmentMonitorWidget()
 {}
 
-void ThriftEnvironmentMonitorUI::SetLabelImg(const char* FilePath, QLabel* label)
+void environmentMonitorWidget::SetLabelImg(const char* FilePath, QLabel* label)
 {
     img.load(FilePath);
     QPixmap pixmap = QPixmap::fromImage(img);

@@ -5,7 +5,8 @@
 #include <QValueAxis>
 #include <QDateTime>
 #include <QDateTimeAxis>
-#include "DeviceToUiHandler.h"
+#include "../../Thrift/DeviceToUiHandler.h"
+
 
 class DlgTempChart : public QChart
 {

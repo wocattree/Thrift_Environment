@@ -1,11 +1,11 @@
 ﻿#pragma once
 
 #include <QtWidgets/QMainWindow>
-#include "ui_ThriftEnvironmentMonitorUI.h"
-#include "Logs.h"
+#include "ui_environmentMonitorWidget.h"
+#include "../Common/Logs.h"
 
 
-class ThriftEnvironmentMonitorUI : public QMainWindow
+class environmentMonitorWidget : public QMainWindow
 {
     Q_OBJECT
 
@@ -13,8 +13,8 @@ public:
     QImage img;
 
 public:
-    ThriftEnvironmentMonitorUI(QWidget *parent = nullptr);
-    ~ThriftEnvironmentMonitorUI();
+    environmentMonitorWidget(QWidget *parent = nullptr);
+    ~environmentMonitorWidget();
 
     //设置控件图片
     void SetLabelImg(const char* FilePath, QLabel* label);

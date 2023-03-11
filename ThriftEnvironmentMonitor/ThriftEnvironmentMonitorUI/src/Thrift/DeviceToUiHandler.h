@@ -6,10 +6,10 @@
 ////////////////////////////////
 #pragma once
 #include <algorithm>
-#include"../ThriftProduce/gen-cpp/DeviceToUi.h"
 #include <iostream>
-#include "Logs.h"
-#include "DeviceDB.h"
+#include "./gen-cpp/DeviceToUi.h"
+#include "../common/Logs.h"
+#include "../Manager/DBManager.h"
 
 //std::vector<double> mytemp(2, 0);
 

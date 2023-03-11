@@ -24,7 +24,7 @@ void DeviceToUiHandler::ReportDeviceTemps(const MonitorTemps& monitortemps)
     //接收到消息，转发到状态机，是什么消息做什么处理todo
 
     //存入数据库
-    auto& m_pDeviceDB = DeviceDB::GetInstance();
+    auto& m_pDeviceDB = DBManager::GetInstance();
 
     std::string Sqlword = "insert into d_environment values( now(),";
     std::string temp = std::to_string(monitortemps.Temps[0]) + ",";

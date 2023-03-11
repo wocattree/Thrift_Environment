@@ -1,9 +1,9 @@
-struct MonitorTemps
+ï»¿struct MonitorTemps
 {
-	1:list<double> Temps										//ÎÂ¶ÈÖµÁĞ±í
+	1:list<double> Temps										//æ¸©åº¦å€¼åˆ—è¡¨
 }
 
-service DeviceToUi										//ÏÂÎ»»ú´«µİµ½¿Í»§¶ËµÄ·şÎñ
+service DeviceToUi										//ä¸‹ä½æœºä¼ é€’åˆ°å®¢æˆ·ç«¯çš„æœåŠ¡
 {
-	void ReportDeviceTemps(1:MonitorTemps monitortemps);					//¶¨ÒåÏÂÎ»»ú´«Êä½Ó¿Ú
+	void ReportDeviceTemps(1:MonitorTemps monitortemps);					//å®šä¹‰ä¸‹ä½æœºä¼ è¾“æ¥å£
 }

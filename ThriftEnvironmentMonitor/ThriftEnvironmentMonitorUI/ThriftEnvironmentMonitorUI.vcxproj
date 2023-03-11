@@ -92,8 +92,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>F:\SoftWare\MySQL\MySQL Server 8.0\lib;$(LibraryPath)</LibraryPath>
-    <ExternalIncludePath>F:\SoftWare\MySQL\MySQL Server 8.0\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>F:\SoftWare\MySQL\MySQL Server 5.7\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>F:\SoftWare\MySQL\MySQL Server 5.7\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <OutDir>$(SolutionDir)Build\Build_$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>Build\Temp\Build_$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <IncludePath>$(IncludePath)</IncludePath>
@@ -162,33 +164,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DeviceDB.cpp" />
-    <ClCompile Include="UiThriftManager.cpp" />
-    <QtRcc Include="ThriftEnvironmentMonitorUI.qrc" />
-    <QtUic Include="ThriftEnvironmentMonitorUI.ui" />
-    <QtMoc Include="ThriftEnvironmentMonitorUI.h" />
-    <ClCompile Include="..\ThriftProduce\gen-cpp\DeviceToUi.cpp" />
-    <ClCompile Include="..\ThriftProduce\gen-cpp\ServerToUi_types.cpp" />
-    <ClCompile Include="DeviceToUiHandler.cpp" />
-    <ClCompile Include="DlgDataTime.cpp" />
-    <ClCompile Include="DlgTempChart.cpp" />
-    <ClCompile Include="Logs.cpp" />
-    <ClCompile Include="ThriftEnvironmentMonitorUI.cpp" />
-    <ClCompile Include="MonitorEnvironment.cpp" />
+    <ClCompile Include="src\Common\Logs.cpp" />
+    <ClCompile Include="src\Manager\DBManager.cpp" />
+    <ClCompile Include="src\Manager\UiThriftManager.cpp" />
+    <ClCompile Include="src\Thrift\DeviceToUiHandler.cpp" />
+    <ClCompile Include="src\Thrift\gen-cpp\DeviceToUi.cpp" />
+    <ClCompile Include="src\Thrift\gen-cpp\ServerToUi_types.cpp" />
+    <ClCompile Include="src\Ui\component\DlgDataTime.cpp" />
+    <ClCompile Include="src\Ui\component\DlgTempChart.cpp" />
+    <ClCompile Include="src\Ui\environmentMonitorWidget.cpp" />
+    <ClCompile Include="src\Ui\mainWidget.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="DlgDataTime.h" />
+    <ClInclude Include="src\Common\Logs.h" />
+    <ClInclude Include="src\Manager\DBManager.h" />
+    <ClInclude Include="src\Manager\UiThriftManager.h" />
+    <ClInclude Include="src\Thrift\DeviceToUiHandler.h" />
+    <ClInclude Include="src\Thrift\gen-cpp\DeviceToUi.h" />
+    <ClInclude Include="src\Thrift\gen-cpp\ServerToUi_types.h" />
+    <QtMoc Include="src\Ui\component\DlgTempChart.h" />
+    <QtMoc Include="src\Ui\component\DlgDataTime.h" />
+    <QtMoc Include="src\Ui\mainWidget.h" />
+    <QtMoc Include="src\Ui\environmentMonitorWidget.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="DlgTempChart.h" />
+    <QtUic Include="src\Ui\environmentMonitorWidget.ui" />
+    <QtUic Include="src\Ui\mainWidget.ui" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\ThriftProduce\gen-cpp\DeviceToUi.h" />
-    <ClInclude Include="..\ThriftProduce\gen-cpp\ServerToUi_types.h" />
-    <ClInclude Include="DeviceDB.h" />
-    <ClInclude Include="DeviceToUiHandler.h" />
-    <ClInclude Include="Logs.h" />
-    <ClInclude Include="UiThriftManager.h" />
+    <QtRcc Include="UIResource.qrc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

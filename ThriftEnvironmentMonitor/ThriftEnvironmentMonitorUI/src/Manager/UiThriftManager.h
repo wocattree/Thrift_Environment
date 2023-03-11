@@ -4,8 +4,8 @@
 #include <thrift/server/TSimpleServer.h>
 #include <thrift/transport/TServerSocket.h>
 #include <thrift/transport/TBufferTransports.h>
-#include "../ThriftProduce//gen-cpp/DeviceToUi.h"
-#include "DeviceToUiHandler.h"
+#include "../Thrift/DeviceToUiHandler.h"
+#include "../Thrift/gen-cpp/DeviceToUi.h"
 
 using namespace ::apache::thrift;
 using namespace ::apache::thrift::protocol;

@@ -1,9 +1,8 @@
 ﻿#pragma once
-
 ////////////////////////////////
-//filename:DeviceDB.h
-//description:数据库单例
-//data:2022/10/16 13:14:43
+//filename:DBManager.h
+//description:brief
+//data:2023/3/11 20:51
 //author:wocattree
 ////////////////////////////////
 
@@ -14,13 +13,14 @@
 #include<WinSock2.h>
 #include<Windows.h>
 #include<mysql.h>
-#include"Logs.h"
+#include "../Common/Logs.h"
 
-class DeviceDB
+
+class DBManager
 {
 private:
-    DeviceDB();
-    ~DeviceDB();
+    DBManager();
+    ~DBManager();
 
 public:
 	////////////////////////////////
@@ -31,9 +31,9 @@ public:
 	//data:2022/10/16 13:21:45
 	//author:wocattree
 	///////////////////////////////
-	static DeviceDB& GetInstance() 
+	static DBManager& GetInstance() 
 	{
-		static DeviceDB instance;
+		static DBManager instance;
 		return instance;
 	}
 

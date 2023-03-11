@@ -1,6 +1,6 @@
-﻿#include"DeviceDB.h"
+﻿#include"DBManager.h"
 
-DeviceDB::DeviceDB()
+DBManager::DBManager()
 {
     _state = false;
     _mysql = new MYSQL;
@@ -11,11 +11,11 @@ DeviceDB::DeviceDB()
     memset(_query, NULL, sizeof(_query));
 }
 
-DeviceDB::~DeviceDB()
+DBManager::~DBManager()
 {
 }
 
-bool DeviceDB::Connect(const char* ip, const char* name, const char* cypher, const char* database_name, const int port)
+bool DBManager::Connect(const char* ip, const char* name, const char* cypher, const char* database_name, const int port)
 {
     if (true == _state)
     {
@@ -40,7 +40,7 @@ bool DeviceDB::Connect(const char* ip, const char* name, const char* cypher, con
     return true;
 }
 
-int DeviceDB::GetTableField(const char* table_name)
+int DBManager::GetTableField(const char* table_name)
 {
     if (false == _state)
     {
@@ -67,7 +67,7 @@ int DeviceDB::GetTableField(const char* table_name)
     return mysql_affected_rows(_mysql);
 }
 
-bool DeviceDB::Query(const char* table_name)
+bool DBManager::Query(const char* table_name)
 {
     if (false == _state)
     {
@@ -122,7 +122,7 @@ bool DeviceDB::Query(const char* table_name)
     return true;
 }
 
-bool DeviceDB::Implement(const char* sentence)
+bool DBManager::Implement(const char* sentence)
 {
     if (false == _state)
     {

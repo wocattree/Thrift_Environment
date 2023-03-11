@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>src/Ui/png/MainButton1.png</file>
+        <file>src/Ui/png/MainButton2.png</file>
+        <file>src/Ui/png/关机.png</file>
+        <file>src/Ui/png/监控.png</file>
+        <file>src/Ui/png/开关-关.png</file>
+        <file>src/Ui/png/开关-开.png</file>
+        <file>src/Ui/png/日照.png</file>
+        <file>src/Ui/png/摄氏度.png</file>
+        <file>src/Ui/png/湿度.png</file>
+        <file>src/Ui/png/新风管.png</file>
+        <file>src/Ui/png/信息查询.png</file>
+        <file>src/Ui/png/照明.png</file>
+    </qresource>
+</RCC>
