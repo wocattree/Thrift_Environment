@@ -12,5 +12,6 @@
         <file>src/Ui/png/新风管.png</file>
         <file>src/Ui/png/信息查询.png</file>
         <file>src/Ui/png/照明.png</file>
+        <file>src/Ui/png/Init.gif</file>
     </qresource>
 </RCC>

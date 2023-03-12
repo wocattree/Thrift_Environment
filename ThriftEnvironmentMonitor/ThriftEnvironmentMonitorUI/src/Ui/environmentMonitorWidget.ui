@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ThriftEnvironmentMonitorUIClass</class>
- <widget class="QMainWindow" name="ThriftEnvironmentMonitorUIClass">
+ <class>environmentMonitorWidget</class>
+ <widget class="QMainWindow" name="environmentMonitorWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
+    <width>834</width>
     <height>720</height>
    </rect>
   </property>
@@ -17,102 +17,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>ThriftEnvironmentMonitorUI</string>
+   <string>environmentMonitorWidget</string>
   </property>
   <widget class="QWidget" name="MainWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="3">
-     <layout class="QVBoxLayout" name="MainVlayout">
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="maximumSize">
-         <size>
-          <width>280</width>
-          <height>50</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>26</pointsize>
-         </font>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>我の家</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="DataTimeHlayout"/>
-      </item>
-     </layout>
-    </item>
-    <item row="0" column="0">
-     <widget class="QListWidget" name="MainListWidget">
-      <property name="maximumSize">
-       <size>
-        <width>800</width>
-        <height>100</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>28</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Sunken</enum>
-      </property>
-      <property name="flow">
-       <enum>QListView::LeftToRight</enum>
-      </property>
-      <property name="spacing">
-       <number>20</number>
-      </property>
-      <item>
-       <property name="text">
-        <string>客厅</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>卧室</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>阳台</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>楼顶</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QPushButton" name="BtnShutDown">
-      <property name="maximumSize">
-       <size>
-        <width>100</width>
-        <height>100</height>
-       </size>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0" colspan="4">
+    <item row="1" column="0" colspan="3">
      <widget class="QStackedWidget" name="MainStackWidget">
       <property name="maximumSize">
        <size>
@@ -600,8 +509,8 @@
       </widget>
      </widget>
     </item>
-    <item row="0" column="2">
-     <widget class="QPushButton" name="BtnQuery">
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pbBack">
       <property name="maximumSize">
        <size>
         <width>100</width>
@@ -613,6 +522,84 @@
       </property>
      </widget>
     </item>
+    <item row="0" column="0">
+     <widget class="QListWidget" name="MainListWidget">
+      <property name="maximumSize">
+       <size>
+        <width>800</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="flow">
+       <enum>QListView::LeftToRight</enum>
+      </property>
+      <property name="spacing">
+       <number>20</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>客厅</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>卧室</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>阳台</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>楼顶</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <layout class="QVBoxLayout" name="MainVlayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>26</pointsize>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>我の家</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="DataTimeHlayout"/>
+      </item>
+     </layout>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -620,7 +607,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1280</width>
+     <width>834</width>
      <height>22</height>
     </rect>
    </property>

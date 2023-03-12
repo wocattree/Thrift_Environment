@@ -50,18 +50,18 @@ void DlgDataTime::ShowTime()
 
 void DlgDataTime::mousePressEvent(QMouseEvent* event)
 {
-    if (event->button() == Qt::LeftButton)
-    {
-        dragPosition = event->globalPos() - frameGeometry().topLeft();
-        event->accept();
-    }
-    else if (event->button() == Qt::RightButton)
-    {
-        close();
-    }
+	/* if (event->button() == Qt::LeftButton)
+	 {
+		 dragPosition = event->globalPos() - frameGeometry().topLeft();
+		 event->accept();
+	 }
+	 else if (event->button() == Qt::RightButton)
+	 {
+		 close();
+	 }*/
 }
 void DlgDataTime::mouseMoveEvent(QMouseEvent* event)
 {
-    move(event->globalPos() - dragPosition);
-    event->accept();
+    //move(event->globalPos() - dragPosition);
+    //event->accept();
 }

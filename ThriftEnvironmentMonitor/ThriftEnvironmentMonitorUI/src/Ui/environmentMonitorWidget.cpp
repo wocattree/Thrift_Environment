@@ -15,11 +15,8 @@ environmentMonitorWidget::environmentMonitorWidget(QWidget *parent)
     ui.DataTimeHlayout->addWidget(Clock);
 
     //设置按钮图标
-    ui.BtnShutDown->setIcon(QIcon(":/src/Ui/png/关机.png"));
-    ui.BtnShutDown->setIconSize(QSize(80,80));
-
-    ui.BtnQuery->setIcon(QIcon(":/src/Ui/png/信息查询.png"));
-    ui.BtnQuery->setIconSize(QSize(80, 80));
+    ui.pbBack->setIcon(QIcon(":/src/Ui/png/信息查询.png"));
+    ui.pbBack->setIconSize(QSize(80, 80));
     SetLabelImg(":/src/Ui/png/照明.png", ui.Label_Light);
     SetLabelImg(":/src/Ui/png/新风管.png", ui.Label_Fan);
     SetLabelImg(":/src/Ui/png/摄氏度.png", ui.Label_Temp);
@@ -37,8 +34,6 @@ environmentMonitorWidget::environmentMonitorWidget(QWidget *parent)
     QTableWidgetItem* Item = new QTableWidgetItem(STabelTime);
     ui.tableWidget->setItem(0, 0, Item);
 
-    connect(ui.BtnShutDown, SIGNAL(clicked()), this, SLOT(close()));
-
     DlgTempChart* chart = new DlgTempChart();
     chart->setTitle("温湿度曲线");
     chart->legend()->hide();
@@ -47,6 +42,7 @@ environmentMonitorWidget::environmentMonitorWidget(QWidget *parent)
     ui.testwidget->setChart(chart);
 
     connect(ui.MainListWidget, SIGNAL(currentRowChanged(int)), ui.MainStackWidget, SLOT(setCurrentIndex(int)));
+    connect(ui.pbBack, &QPushButton::clicked, this, &environmentMonitorWidget::signalBack);
 
     ui.la_envi_view->setPixmap(QPixmap(":/src/Ui/png/监控.png"));
     ui.la_envi_view->setScaledContents(true);

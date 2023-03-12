@@ -20,5 +20,9 @@ public:
     void SetLabelImg(const char* FilePath, QLabel* label);
 
 private:
-    Ui::ThriftEnvironmentMonitorUIClass ui;
+    Ui::environmentMonitorWidget ui;
+
+signals:
+	//返回主界面
+	void signalBack();
 };

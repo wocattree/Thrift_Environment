@@ -39,6 +39,32 @@
 #include "src/Ui/environmentMonitorWidget.h"
 #include "src/Common/Logs.h"
 #include <QtWidgets/QApplication>
+#include <QMovie>
+#include <QElapsedTimer>
+
+////////////////////////////////
+//function name:
+//description:显示gif动画
+//param in:
+//
+//return:
+//
+//data:2023/3/12 20:42
+//
+//author:wocattree
+///////////////////////////////
+
+
+void GifPlay(QLabel* label)
+{
+	label->show();
+}
+
+void GifClose(QLabel* label)
+{
+	label->close();
+}
+
 
 int main(int argc, char *argv[])
 {
@@ -55,6 +81,34 @@ int main(int argc, char *argv[])
 
     //主界面显示
     mainWidget w;
+
+	QMovie* movie;
+	QElapsedTimer t;
+	movie = new QMovie(":/src/Ui/png/Init.gif");
+	//movie->setSpeed(50);
+
+	QLabel* label = new QLabel();
+
+	if (!movie->isValid())
+	{
+		QLabel* label = new QLabel();
+	}
+
+	label->resize(1280, 720);
+	label->setMovie(movie);
+	label->setScaledContents(true);
+
+	movie->start();
+	GifPlay(label);
+	t.start();
+	qint64 ms = 4000;
+	while (!t.hasExpired(ms))
+	{
+		QApplication::processEvents();
+	}
+
+	GifClose(label);
+
     w.resize(1280, 720);
     w.setStyleSheet("background-color:white;");
     w.show();
