@@ -18,3 +18,7 @@
 /ThriftEnvironmentMonitor/EnvironmentMonitor/.vs/EnvironmentMonitorServer
 /ThriftEnvironmentMonitor/EnvironmentMonitor/x64
 /ThriftEnvironmentMonitor/x64
+/ThriftEnvironmentMonitor/Build/Build_x64/Debug/fmt.dll
+/ThriftEnvironmentMonitor/Build/Build_x64/Debug/ThriftEnvironmentMonitorUI.exe
+/ThriftEnvironmentMonitor/Build/Build_x64/Debug/ThriftEnvironmentMonitorUI.ilk
+/ThriftEnvironmentMonitor/Build/Build_x64/Debug/ThriftEnvironmentMonitorUI.pdb
